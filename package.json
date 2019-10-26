@@ -1,0 +1,23 @@
+{
+  "name": "hiromi-chan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pretisy/Hiromi-Chan.git"
+  },
+  "author": "Pretisy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pretisy/Hiromi-Chan/issues"
+  },
+  "homepage": "https://github.com/Pretisy/Hiromi-Chan#readme"
+}
