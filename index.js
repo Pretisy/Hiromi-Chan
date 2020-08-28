@@ -1,16 +1,24 @@
-const Discord = require(`discord.js`);
-const bot = new Discord.Client();
+const Discord = require('discord.js');
 
-const token = "NDY1MjcyODk3ODUwODM0OTQ1.W0E1Jw.KwEaAsWogvgAB9ltR8DDGdH5Gq0";
+const client = new Discord.Client();
 
-bot.on("ready", () => {
-  console.log("This bot is Online.");
+const token = "";
+
+const prefix = '~';
+
+client.once('ready', () => {
+  console.log('Hiromi-Chan is online!');
 });
 
-bot.on("message", msg => {
-  if (msg.content === "Hello") {
-    msg.reply(`Hello Human!`);
+client.on('message', message => {
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+  const args = message.content.slice(prefix.length).split(/ +/);
+  const command = args.shift().toLowerCase();
+
+  if (command === 'Ping') {
+    message.channel.send('Pong!');
   }
 });
 
-bot.login(token);
+client.login(token);
