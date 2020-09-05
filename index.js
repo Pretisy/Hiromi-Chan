@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 
+const config = require('./config.json');
+
 const client = new Discord.Client();
 
-const token = " ";
-
-const prefix = '~';
+const prefix = config.prefix;
 
 const fs = require('fs');
 
@@ -30,7 +30,6 @@ client.on('message', message => {
   if (command === 'ping') {
     client.commands.get('ping').execute(message, args);
   }
-
 });
 
-client.login(token);
+client.login(config.token);
