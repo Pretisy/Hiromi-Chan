@@ -28,8 +28,11 @@ client.on('message', message => {
   const command = args.shift().toLowerCase();
 
   if (command === 'ping') {
-    client.commands.get('ping').execute(message, args);
+    client.commands.get('Ping').execute(message, args);
+  } else if (command === 'say') {
+    client.commands.get('Say').execute(message, args);
   }
+
 });
 
 client.login(config.token);
